@@ -1,0 +1,29 @@
+{
+    "json": {
+        "numero": 1212,
+        "string": "dasdasdsa",
+        "lista": [
+            1, 2, 3, 4
+        ],
+        "lista_2": [
+            "lucas", "ricciardi"
+        ],
+        "lista_3": [
+            {
+                "objeto": 1
+            },
+            {
+                "objeto": 2
+            }
+        ]
+    },
+    "config": {
+        "app": "dexterops",
+        "version": 1.0
+    },
+    "git": {
+        "user": "devops@dexter.com.br",
+        "password": "4linux",
+        "repo": "git@devops.4linux.com.br"
+    }
+}
