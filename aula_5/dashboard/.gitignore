@@ -1,0 +1,12 @@
+
+# python virtualenv
+env
+
+# vscode settings
+.vscode
+
+# pycache
+__pycache__
+
+# environment settings
+.env

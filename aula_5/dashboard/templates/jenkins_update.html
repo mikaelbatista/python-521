@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="card">
+  <div class="card-header">
+    <h3>Jenkins</h3>
+  </div>
+  <div class="card-body">
+    <header>
+      <h2>{{ context.job.fullName }}</h2>
+    </header>
+    <form method="POST" action="/jenkins/{{ context.job.fullName }}">
+      <div class="form-group">
+        <textarea rows="4" class="form-control" name="xml">
+          {{ context.job.xml }}
+        </textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

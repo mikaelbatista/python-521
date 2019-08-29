@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="card shadow">
+  <div class="card-body">
+    <table class="table table-striped" style="text-align: center;">
+      <thead>
+        <tr>
+          <td>Nome</td>
+          <td>Email</td>
+          <td>Data</td>
+          <td>Mensagem</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for commit in context.commits %}
+        <tr>
+          <td>{{ commit.author_name }}</td>
+          <td>{{ commit.author_email }}</td>
+          <td>{{ commit.committed_date }}</td>
+          <td>{{ commit.message }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

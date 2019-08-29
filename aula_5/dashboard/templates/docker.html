@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="card shadow">
+  <div class="card-header">
+    <h3>Docker</h3>
+  </div>
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Imagem</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for container in context.containers %}
+        <tr>
+          <td>{{ container.short_id }}</td>
+          <td>{{ container.image.tags.0 }}</td>
+          <td>{{ container.status }}</td>
+          <td>
+            <a href="/docker/{{ container.id }}/start" class="mr-2">
+              <i style="color: green;" class="fas fa-play"></i>
+            </a>
+            <a href="/docker/{{ container.id }}/stop">
+              <i style="color: red;" class="fas fa-stop"></i>
+            </a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
